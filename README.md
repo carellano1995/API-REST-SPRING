@@ -15,28 +15,63 @@ API-REST-SPRING es una API WEB REST encargada de realizar un CRUD.
 - GIT
 - Terminal Decente jaja (ITERM con plugins oh my zsh)
 
-# New Features!
+# Controllers
 
-- Import a HTML file and watch it magically convert to Markdown
-- Drag and drop images (requires your Dropbox account be linked)
+### GET/Players
 
-You can also:
+Este endpoint devolvera una lista con todos los registros paginados.
 
-- Import and save files from GitHub, Dropbox, Google Drive and One Drive
-- Drag and drop markdown and HTML files into Dillinger
-- Export documents as Markdown, HTML and PDF
+```json
+{
+  "content": [],
+  "pageable": {
+    "sort": {
+      "sorted": false,
+      "unsorted": true,
+      "empty": true
+    },
+    "offset": 0,
+    "pageSize": 20,
+    "pageNumber": 0,
+    "paged": true,
+    "unpaged": false
+  },
+  "totalPages": 0,
+  "totalElements": 0,
+  "last": true,
+  "size": 20,
+  "numberOfElements": 0,
+  "number": 0,
+  "sort": {
+    "sorted": false,
+    "unsorted": true,
+    "empty": true
+  },
+  "first": true,
+  "empty": true
+}
+```
 
-Markdown is a lightweight markup language based on the formatting conventions that people naturally use in email. As [John Gruber] writes on the [Markdown site][df1]
+### GET/Players/all
 
-> The overriding design goal for Markdown's
-> formatting syntax is to make it as readable
-> as possible. The idea is that a
-> Markdown-formatted document should be
-> publishable as-is, as plain text, without
-> looking like it's been marked up with tags
-> or formatting instructions.
+Este endpoint devolvera una lista con todos los registros.
 
-This text you see here is _actually_ written in Markdown! To get a feel for Markdown's syntax, type some text into the left window and watch the results in the right.
+```json
+[]
+```
+
+### POST/Players
+
+Este endpoint Permitira crear un player
+
+Si fue exitoso devolvera un status 200 Y el siguiente JSON:
+
+```json
+{
+  "name": "Cristian",
+  "rut": "22420731-k"
+}
+```
 
 ### Tech
 
