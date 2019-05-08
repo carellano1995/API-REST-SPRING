@@ -1,0 +1,14 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Spring Boot-ApiRestApplication<api-rest>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "console": "internalConsole",
+            "mainClass": "com.springboot.apirest.ApiRestApplication",
+            "projectName": "api-rest",
+            "args": ""
+        }
+    ]
+}
