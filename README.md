@@ -15,6 +15,19 @@ API-REST-SPRING es una API WEB REST encargada de realizar un CRUD.
 - GIT
 - Terminal Decente jaja (ITERM con plugins oh my zsh)
 
+### Plugins
+
+Algunos plugins que utilizamos en Visual Studio Code son:
+
+| Plugin                     |
+| -------------------------- |
+| Spring boot Tools          |
+| Spring boot Dashboard      |
+| Spring boot extension Pack |
+| Maven for java             |
+| Language support for java  |
+| Java extension packk       |
+
 # Controllers
 
 ### GET/Players
@@ -102,16 +115,3 @@ $ cd API-REST-SPRING/
 $ mvn package
 $ mvn spring-boot:run
 ```
-
-### Plugins
-
-Algunos plugins que utilizamos en Visual Studio Code son:
-
-| Plugin                     |
-| -------------------------- |
-| Spring boot Tools          |
-| Spring boot Dashboard      |
-| Spring boot extension Pack |
-| Maven for java             |
-| Language support for java  |
-| Java extension packk       |
