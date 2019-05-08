@@ -28,6 +28,19 @@ Algunos plugins que utilizamos en Visual Studio Code son:
 | Language support for java  |
 | Java extension packk       |
 
+### Installation
+
+API-REST-SPRING requires [Java](https://nodejs.org/) 1.8+ to run.
+
+Install the dependencies and devDependencies and start the server.
+
+```sh
+$ git clone https://github.com/carellano1995/API-REST-SPRING.git
+$ cd API-REST-SPRING/
+$ mvn package
+$ mvn spring-boot:run
+```
+
 # Controllers
 
 ### GET/Players
@@ -102,16 +115,3 @@ Dillinger uses a number of open source projects to work properly:
 
 And of course Dillinger itself is open source with a [public repository][dill]
 on GitHub.
-
-### Installation
-
-API-REST-SPRING requires [Java](https://nodejs.org/) 1.8+ to run.
-
-Install the dependencies and devDependencies and start the server.
-
-```sh
-$ git clone https://github.com/carellano1995/API-REST-SPRING.git
-$ cd API-REST-SPRING/
-$ mvn package
-$ mvn spring-boot:run
-```
