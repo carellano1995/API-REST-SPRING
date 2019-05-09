@@ -27,7 +27,6 @@ Algunos plugins que utilizamos en Visual Studio Code son:
 | Maven for java             |
 | Language support for java  |
 | Java extension packk       |
-
 | Java Test Runner
 vscjava.vscode-java-test |
 
