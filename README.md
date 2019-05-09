@@ -19,17 +19,15 @@ API-REST-SPRING es una API WEB REST encargada de realizar un CRUD.
 
 Algunos plugins que utilizamos en Visual Studio Code son:
 
-| Plugin                     |
-| -------------------------- |
-| Spring boot Tools          |
-| Spring boot Dashboard      |
-| Spring boot extension Pack |
-| Maven for java             |
-| Language support for java  |
-| Java extension packk       |
-
-| Java Test Runner
-vscjava.vscode-java-test |
+| Plugin                                    |
+| ----------------------------------------- |
+| Spring boot Tools                         |
+| Spring boot Dashboard                     |
+| Spring boot extension Pack                |
+| Maven for java                            |
+| Language support for java                 |
+| Java extension packk                      |
+| Java Test Runner vscjava.vscode-java-test |
 
 ### Installation
 
