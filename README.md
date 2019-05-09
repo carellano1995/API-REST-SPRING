@@ -1,23 +1,19 @@
 # API-REST-SPRING
 
-[![N|Solid](https://cldup.com/dTxpPi9lDf.thumb.png)](https://nodesource.com/products/nsolid)
+![spring|java](https://spring.io/img/spring-by-pivotal.png)
 
-[![Build Status](https://travis-ci.org/joemccann/dillinger.svg?branch=master)](https://travis-ci.org/CARELLANO/API-REST-SPRING)
+## Requirements
 
-API-REST-SPRING es una API WEB REST encargada de realizar un CRUD.
-
-## Requisitos
-
-- Java 1.8 o mayor
+- Java 1.8 +
 - PostMan
-- Visual Studio Code u otro IDE similar (STS, NetBeans, etc...)
+- Visual Studio Code or another similar IDE (STS, NetBeans, etc ...)
 - MySql
 - GIT
-- Terminal Decente jaja (ITERM con plugins oh my zsh)
+- Terminal (ITERM con plugins oh my zsh)
 
 ### Plugins
 
-Algunos plugins que utilizamos en Visual Studio Code son:
+Some plugins that use in Visual Studio Code are:
 
 | Plugin                                    |
 | ----------------------------------------- |
@@ -26,12 +22,20 @@ Algunos plugins que utilizamos en Visual Studio Code son:
 | Spring boot extension Pack                |
 | Maven for java                            |
 | Language support for java                 |
-| Java extension packk                      |
+| Java extension pack                       |
 | Java Test Runner vscjava.vscode-java-test |
+
+## Set up MySQL
+
+```sh
+$ mysql -u root -p
+$ > CREATE USER 'username'@'localhost' IDENTIFIED BY 'password';
+$ > GRANT ALL PRIVILEGES ON *.* TO 'username'@'localhost';
+```
 
 ### Installation
 
-API-REST-SPRING requires [Java](https://nodejs.org/) 1.8+ to run.
+API-REST-SPRING requires [Java](https://www.java.com/es) 1.8+ to run.
 
 Install the dependencies and devDependencies and start the server.
 
@@ -44,9 +48,19 @@ $ mvn spring-boot:run
 
 # Controllers
 
-### GET/Players
+### GET[/players]
 
-Este endpoint devolvera una lista con todos los registros paginados.
+This endpoint will return a list with all the paged records.
+
+#### Request
+
+```json
+url: http://localhost:8080/players
+method: GET
+headers : {Content-Type : application/json}
+```
+
+If successful, it will return a status **200** and the following JSON:
 
 ```json
 {
@@ -79,40 +93,84 @@ Este endpoint devolvera una lista con todos los registros paginados.
 }
 ```
 
-### GET/Players/all
+### GET ALL[/players/all]
 
-Este endpoint devolvera una lista con todos los registros.
+This endpoint will return a list with all records.
+
+```json
+url: http://localhost:8080/players/all
+method: GET
+headers : {Content-Type : application/json}
+```
+
+If successful, it will return a status **200** and the following JSON:
 
 ```json
 []
 ```
 
-### POST/Players
+### POST[/players]
 
-Este endpoint Permitira crear un player
+This endpoint will allow to create a player.
 
-Si fue exitoso devolvera un status 200 Y el siguiente JSON:
+#### Request
 
 ```json
-{
-  "name": "Cristian",
-  "rut": "22420731-k"
+url: http://localhost:8080/players
+method: POST
+headers : {Content-Type : application/json}
+body: {
+	"name": "Cristiano Ronaldo",
+	"rut": "20320983-5"
 }
 ```
 
-### Tech
+If successful, it will return a status **200** and the following JSON:
 
-Dillinger uses a number of open source projects to work properly:
+```json
+{
+  "id": 1,
+  "name": "Cristiano Ronaldo",
+  "rut": "20320983-5"
+}
+```
 
-- [AngularJS] - HTML enhanced for web apps!
-- [Ace Editor] - awesome web-based text editor
-- [markdown-it] - Markdown parser done right. Fast and easy to extend.
-- [Twitter Bootstrap] - great UI boilerplate for modern web apps
-- [node.js] - evented I/O for the backend
-- [Express] - fast node.js network app framework [@tjholowaychuk]
-- [Gulp] - the streaming build system
-- [Breakdance](http://breakdance.io) - HTML to Markdown converter
-- [jQuery] - duh
+### PUT[/players/{id}]
 
-And of course Dillinger itself is open source with a [public repository][dill]
-on GitHub.
+This endpoint will allow to update a player.
+
+#### Request
+
+```json
+url: http://localhost:8080/players/{id}
+method: PUT
+headers : {Content-Type : application/json}
+body: {
+	"name": "Cristiano R.",
+	"rut": "20320983-5"
+}
+```
+
+If successful, it will return a status **200** and the following JSON:
+
+```json
+{
+  "id": 1,
+  "name": "Cristiano R.",
+  "rut": "20320983-5"
+}
+```
+
+### Delete[/players/{id}]
+
+This endpoint will allow to eliminate a player.
+
+#### Request
+
+```json
+url: http://localhost:8080/players/{id}
+method: DELETE
+headers : {Content-Type : application/json}
+```
+
+If successful, it will return a status **200**.
