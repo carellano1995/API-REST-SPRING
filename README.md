@@ -28,6 +28,9 @@ Algunos plugins que utilizamos en Visual Studio Code son:
 | Language support for java  |
 | Java extension packk       |
 
+| Java Test Runner
+vscjava.vscode-java-test |
+
 ### Installation
 
 API-REST-SPRING requires [Java](https://nodejs.org/) 1.8+ to run.
