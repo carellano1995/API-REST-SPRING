@@ -163,7 +163,7 @@ If successful, it will return a status **200** and the following JSON:
 
 ### Delete[/players/{id}]
 
-This endpoint will allow to eliminate a player.
+This endpoint will allow to delete a player.
 
 #### Request
 
